@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Mars work</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p>Find Mars Latest Summarized Information Here</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Click to Scrape Latest Data</a></p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="jumbotron text-left">
+      
+      <h2>Latest Mars News:</h2>
+      
+      <section>
+        <h3>Headline: {{ mars.news_title }}</h3>
+        <h3>Summary: {{ mars.news_paragraph }}</h3>
+        </section>
+        <div class="container-fluid">    
+          <h2>Featured Mars Image</h2>
+          <img src="{{ mars.nasa_img }}" alt="mars_image">
+        </div>
+      </div>
+    
+    <div class="jumbotron">
+        
+    <h2>Current Weather on Mars</h2>
+        
+    <section>
+      <p>
+        {{ mars.last_tweet }}
+        </p>
+      <h2>Mars facts</h2>
+              
+      <table class="tablepress tablepress-id-mars" id="tablepress-mars">
+          <tbody>
+          <tr class="row-1 odd">
+          <td class="column-1"><strong>Equatorial Diameter:</strong></td><td class="column-2">6,792 km<br/>
+          </td>
+          </tr>
+          <tr class="row-2 even">
+          <td class="column-1"><strong>Polar Diameter:</strong></td><td class="column-2">6,752 km<br/>
+          </td>
+          </tr>
+          <tr class="row-3 odd">
+          <td class="column-1"><strong>Mass:</strong></td><td class="column-2">6.42 x 10^23 kg (10.7% Earth)</td>
+          </tr>
+          <tr class="row-4 even">
+          <td class="column-1"><strong>Moons:</strong></td><td class="column-2">2 (<a href="https://space-facts.com/phobos/">Phobos</a> &amp; <a href="https://space-facts.com/deimos/">Deimos</a>)</td>
+          </tr>
+          <tr class="row-5 odd">
+          <td class="column-1"><strong>Orbit Distance:</strong></td><td class="column-2">227,943,824 km (1.52 AU)</td>
+          </tr>
+          <tr class="row-6 even">
+          <td class="column-1"><strong>Orbit Period:</strong></td><td class="column-2">687 days (1.9 years)<br/>
+          </td>
+          </tr>
+          <tr class="row-7 odd">
+          <td class="column-1"><strong>Surface Temperature: </strong></td><td class="column-2">-153 to 20 °C</td>
+          </tr>
+          <tr class="row-8 even">
+          <td class="column-1"><strong>First Record:</strong></td><td class="column-2">2nd millennium BC</td>
+          </tr>
+          <tr class="row-9 odd">
+          <td class="column-1"><strong>Recorded By:</strong></td><td class="column-2">Egyptian astronomers</td>
+          </tr>
+          </tbody>
+          </table>
+      </section>
+    </div>
+
+      <div class="jumbotron">
+    
+      <h2>Mars Hemispheres</h2>
+    
+      <section>
+        <div class="container-fluid">    
+          <h2>{{ mars.hemisphere_name1 }}</h2>
+          <img src="{{ mars.hemisphere_image1 }}" alt="mars_image">
+        </div>
+        <div class="container-fluid">    
+          <h2>{{ mars.hemisphere_name2 }}</h2>
+          <img src="{{ mars.hemisphere_image2 }}" alt="mars_image">
+        </div>
+        <div class="container-fluid">    
+          <h2>{{ mars.hemisphere_name3 }}</h2>
+          <img src="{{ mars.hemisphere_image3 }}" alt="mars_image">
+        </div>
+        <div class="container-fluid">    
+          <h2>{{ mars.hemisphere_name4 }}</h2>
+          <img src="{{ mars.hemisphere_image4 }}" alt="mars_image">
+        </div>
+      </section>
+      </div>
+    </div>
+  </div>
+  
+
+</body>
+
+<footer class="container-fluid">
+  <p>Copyright Berga Production</p>
+</footer>
+
+</html>
